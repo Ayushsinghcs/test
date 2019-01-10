@@ -3,6 +3,9 @@ var fs = require("fs");
 var path= require("path");
 var app = express();
 
+
+const port=Number(process.env.PORT || 3000);
+
 app.get('/',(req,res)=>{
 
              //  fs.readFile('chart_data.json', (err, data) => {
@@ -16,7 +19,7 @@ app.get('/',(req,res)=>{
 });
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
 
 console.log("server running");
 
